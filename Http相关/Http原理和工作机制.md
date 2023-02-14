@@ -64,5 +64,6 @@
     * application/x-www-form-urlencoded：普通表单（纯文字表单），encode URL格式
 
       ![image.png](assets/form_encoded.png)
-    * multipart/form-data:多部分形式。
+    * multipart/form-data:多部分形式。使用这种方式来上传图片是目前主流的方式。
+    * application/json , image/jpeg , application/zip等：单项内容(文本或非文本都可以，用于Api的响应或者POST/PUT请求)
   * Content-Type：指定Body类型。
