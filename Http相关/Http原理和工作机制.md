@@ -65,5 +65,25 @@
 
       ![image.png](assets/form_encoded.png)
     * multipart/form-data:多部分形式。使用这种方式来上传图片是目前主流的方式。
-    * application/json , image/jpeg , application/zip等：单项内容(文本或非文本都可以，用于Api的响应或者POST/PUT请求)
+    * application/json ：json形式，用于Api的响应或者POST/PUT请求。
+    * image/jpeg , application/zip等：单文件，用于Api的响应或者POST/PUT请求。
   * Content-Type：指定Body类型。
+  * Location:重定向的目标URL。
+  * User-Agent:用户代理。即是谁实际发送请求、接受响应的，例如⼿机浏览器、某款⼿机 App。
+  * Transfer:chunked（分块传输编码）⽤于当响应发起时，内容⻓度还没能确定的情况下。和 Content-Length 不同时使⽤。⽤途是尽早给出响应，减少⽤户等待。
+  * Range / Accept-Range：按范围取数据
+    * Accept-Range: bytes 响应报⽂中出现，表示服务器⽀持按字节来取范围数据
+    * Range: bytes=<start>-<end> 请求报⽂中出现，表示要取哪段数据
+    * Content-Range:<start>-<end>/total 响应报⽂中出现，表示发送的是哪段数据
+      作用：断点续传、多线程下载。
+
+# 其他Headers
+
+* Accept: 客户端能接受的数据类型。如 text/html。
+* Accept-Charset: 客户端接受的字符集。如 utf-8。
+* Accept-Encoding: 客户端接受的压缩编码类型。如 gzip。
+* Content-Encoding：压缩类型。如 gzip。
+
+# Cache
+
+作用：在客户端或中间⽹络节点缓存数据，降低从服务器取数据的频率，以提⾼⽹络性能。
