@@ -1,9 +1,9 @@
-# Http到底是什么 
+# Http到底是什么
 
 特点：一次配置，终身使用。
 
-* 浏览器地址直接输入
-* Android中发送网络请求
+* 浏览器地址直接输入。
+* Android中发送网络请求。
 
 # 什么是HTTP(HyperText Transfer Protocol 超文本传输协议)
 
